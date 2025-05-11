@@ -1,0 +1,61 @@
+
+.TH VOIBCORE 1 "May 2025" "VOIBCORE 0.5" "Primitive OS Interface"
+
+.SH NAME
+voidcore \- minimalist bootable operating system for BIOS-based hardware
+
+.SH SYNOPSIS
+.B voidcore.iso
+is a bootable ISO image that runs a simple, interactive BIOS-based program on x86 hardware.
+
+.SH DESCRIPTION
+VOIBCORE is a bootloader-stage program that runs in real mode (16-bit) and uses BIOS interrupts to receive keyboard input and echo characters to the screen.
+
+The system does not include a shell, file system, or memory management. It is a single-loop text-mode interface used to prototype low-level behavior and test physical key mappings.
+
+.SH FEATURES
+.TP
+\- Raw keyboard input via BINT 0x16R
+.TP
+\- Teletype screen output via BINT 0x10R
+.TP
+\- 80x25 VGA text mode
+.TP
+\- No OS, no dependencies
+
+.SH USAGE
+Type keys and observe output. Useful for verifying keyboard layouts and learning BIOS interrupt behavior on real hardware.
+
+.PP
+To preserve maximum bare-metal control, the final bootable media should avoid GRUB entirely.
+.PP
+On Windows 11 Pro, this is achieved by mounting the generated ISO file, extracting Bboot.imgR, and flashing that directly to a USB drive using Rufus. This ensures the target system boots directly from the MBR image, without any intermediary bootloader.
+
+.SH WARNINGS
+VOIBCORE 0.5 is not memory safe, partition-aware, or interrupt isolated.
+
+The system lacks:
+.TP
+\- Filesystem drivers
+.TP
+\- Memory protection
+.TP
+\- Disk or I/O safety guarantees
+
+Running VOIBCORE on bare metal may lead to unpredictable hardware behavior or overwrite of sensitive memory regions.
+
+You assume all responsibility for any resulting data loss or damage.
+
+.SH PHILOSOPHY
+VOIBCORE is developed under a principle of "vibe coding" — a method of spontaneous and intuitive software construction.
+
+All source code and design choices should originate from vibe-driven intent unless explicitly noted. Manual interventions are rare and will be documented when necessary.
+
+.TP
+VOIBCORE stands in deliberate contrast to TempleOS.
+
+TempleOS was meticulously handcrafted by its sole author, who pursued divine design with exacting clarity. VOIBCORE, by comparison, is not handcrafted at all. It is not designed — it is allowed.
+
+This project emerges through unfiltered rhythm, experimentation, and improvisation. Where TempleOS seeks total control, VOIBCORE seeks surrender. The former is liturgy; the latter is séance.
+
+Together, they mark opposite poles in the domain of spiritual computing.
