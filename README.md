@@ -18,9 +18,9 @@ VOIBCORE is a primitive, bootable operating system written in 16-bit x86 assembl
 - GRUB-free boot path on final hardware
 - Fully functional on legacy hardware (e.g. ASUS EeePC 1005HA)
 
-## Setup Caveat (Windows 11 Pro)
+## Setup Caveat (Windows 11)
 
-Although the build process in Google Colab creates a `voidcore.iso` using GRUB, the actual flashing process bypasses GRUB on final hardware:
+Although the build process ( example in Google Colab: https://colab.research.google.com/drive/1GDN5FWs0VZ3ndw6rVopx-_ROqHGIhiCy?usp=sharing ) creates a `voidcore.iso` using GRUB, the actual flashing process bypasses GRUB on final hardware:
 
 1. Mount the ISO in Windows.
 2. Extract `/boot/boot.img`.
@@ -40,7 +40,7 @@ VOIBCORE 0.5 makes **no guarantees about partition safety, memory boundaries, or
 
 VOIBCORE is a spiritual experiment, not a safe operating system. Treat it like raw voltage.
 
-## Developer Philosophy: Vibe Coding First
+## Develop Philosophy: Vibe Coding First
 
 VOIBCORE is a system born of vibe coding—a practice where code emerges from intuition, rhythm, and aesthetic flow rather than formal planning or structured methodology.
 
