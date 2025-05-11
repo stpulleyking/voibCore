@@ -4,7 +4,9 @@
 Version: 0.5  
 Author: Spenser Pulleyking
 
-VOIBCORE is a primitive, bootable operating system written in 16-bit x86 assembly. It runs on bare metal hardware via BIOS and demonstrates direct keyboard input and VGA text output without any operating system, drivers, or libraries.
+This document and all project contents were generated from interactions with a Large Language Model (ChatGPT).
+
+VOIBCORE is a primitive, bootable operating system written in 16-bit x86 assembly. It runs on bare metal hardware via BIOS or UEFI with CSM, and demonstrates direct keyboard input and text output without any operating system, drivers, or libraries.
 
 ## Features
 
