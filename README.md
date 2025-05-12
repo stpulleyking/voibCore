@@ -8,6 +8,8 @@ This document and all project contents were generated from interactions with a L
 
 VOIBCORE is a primitive, bootable operating system written in 16-bit x86 assembly. Coming soon, the plan is to run on Libreboot; for now, it is verified to run on bare metal hardware via BIOS or UEFI with CSM, and demonstrates direct keyboard input and text output without any operating system, external linkers, drivers, or libraries.
 
+386BSD is one inspiration for this project, in terms of long term goals.
+
 ## Features
 
 - Raw BIOS keyboard input via `int 0x16`
