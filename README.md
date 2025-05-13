@@ -29,7 +29,7 @@ Although the build process (run the .ipynb in this repository, or use the hosted
 
 - Optionally, this repository contains a copy of `boot.img` already extracted, to allow skipping the above steps.
 
-3. Use Rufus or similar to flash `boot.img` directly to a USB drive.
+3. Use Rufus or similar to flash `boot.img` directly to a USB drive (USB drive may be flashed repeatedly this way, but may require additional reformatting to be returned to its previous state, so choose your drive carefully!) boot.img is, of course, 512 bytes, so your drive WILL be big enough, unless you are using punch-cards.
 
 This results in a **pure MBR boot sector**—no bootloader involved at runtime.
 
