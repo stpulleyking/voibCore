@@ -20,13 +20,16 @@ VOIBCORE is a primitive, bootable operating system written in 16-bit x86 assembl
 - GRUB-free boot path on final hardware
 - Fully functional on legacy hardware (e.g. ASUS EeePC 1005HA)
 
-## Setup Caveat (Windows 11)
+## Setup Caveat
 
-Although the build process ( example in Google Colab: https://colab.research.google.com/drive/1GDN5FWs0VZ3ndw6rVopx-_ROqHGIhiCy?usp=sharing ) creates a `voidcore.iso` using GRUB, the actual flashing process bypasses GRUB on final hardware:
+Although the build process (run the .ipynb in this repository, or use the hosted example in Google Colab: https://colab.research.google.com/drive/1GDN5FWs0VZ3ndw6rVopx-_ROqHGIhiCy?usp=sharing ) creates a `voidcore.iso` using GRUB, the actual flashing process bypasses GRUB on final hardware by:
 
-1. Mount the ISO in Windows.
-2. Extract `/boot/boot.img`.
-3. Use Rufus to flash `boot.img` directly to a USB drive.
+1. Mounting the ISO on the build process hardware.
+2. Extracting `/boot/boot.img`
+
+- Optionally, this repository contains a copy of `boot.img` already extracted, to allow skipping the above steps.
+
+3. Use Rufus or similar to flash `boot.img` directly to a USB drive.
 
 This results in a **pure MBR boot sector**—no bootloader involved at runtime.
 
