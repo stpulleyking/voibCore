@@ -28,7 +28,7 @@ Although the build process (run the .ipynb in this repository, or use the hosted
 2. Extracting `/boot/boot.img`
 
 - Optionally, this repository contains a copy of `boot.img` already extracted, to allow skipping the above steps.
-- (also optionally, and somewhat obviously, the .ipynb file could be edited to simply output `boot.img` for download. But this was not the initial vibe-code suggested!)
+- Also optionally (and somewhat obviously) the .ipynb file could be edited, to simply output `boot.img` for download. But this was not what the initial vibe-code suggested!)
 
 3. Use Rufus or similar to flash `boot.img` directly to a USB drive (USB drive may be flashed repeatedly this way, but may require additional reformatting to be returned to its previous state, so choose your drive carefully!) boot.img is, of course, 512 bytes, so your drive WILL be big enough, unless you are using punch-cards.
 
